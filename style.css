@@ -1,0 +1,467 @@
+*,*:before,*:after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #ffef78;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container{
+	position: static;
+	max-width: 1400px;
+	border-radius: 20px;
+	background-color: #6dd3ff;
+	padding: 20px;
+	margin: 40px auto;
+}
+.default{
+	width: 100%;
+
+	background-color: white;
+	border-radius: 20px;
+}
+.second-default{
+	margin-top: 8px;
+}
+header{
+	display: flex;
+	flex: 50% 50%;
+	height: 160px;
+	padding: 10px;
+	box-shadow: 0 0 5px 2px black;
+}
+.header-child{
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#project{
+	position: relative;
+	flex: 50%;
+	border-right: 2px solid black;
+}
+.emb{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: grey;
+}
+#help{
+	width: 60%;
+	border-left: 2px solid black;
+}
+.title{
+	width: 45%;
+	padding: 15px;
+}
+#title-help{
+	font-size: 18px;
+	font-weight: 120px;
+	flex-basis: 65%;
+	text-align: justify;
+}
+#project-title{
+	font-size: 28px;
+}
+main{
+	position: relative;
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+#visible-page{
+	position: relative;
+	width: calc(100% - 40px);
+	opacity: 1;
+	margin: 20px auto;
+}
+.page{
+	position: absolute;
+	height: 600px;
+	width: 0;
+	border-radius: 20px;
+	opacity: 0;
+	transition: .6s ease;
+}
+.grid-box-1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: grid;
+	grid-gap: 20px;
+	grid-template: repeat(8, 1fr)/ repeat(8, 1fr);
+}
+.grid-item{
+	border-radius: 20px;
+	box-shadow: 0 0 5px 2px black;
+}
+.item-1{
+	grid-column: 1/5;
+	grid-row: 1/5;
+	background-color: purple;
+}
+.item-2{
+	grid-column: 5/9;
+	grid-row: 1/9;
+	background-color: orange;
+}
+.item-3{
+	grid-column: 1/5;
+	grid-row: 5/9;
+	background-color: yellow;
+}
+#page-buttons{
+	width: 50%;
+	height: 100px;
+	margin: 0px auto;
+
+}
+#page-buttons-color{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	
+}
+.page-button{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow:0 0 6px 3px black;
+	cursor: pointer;
+	z-index: 5;
+}
+.page-button:hover{
+	background-color: #98cb0d;
+	box-shadow:0 0 6px 3px white;
+	z-index: 3;
+}
+.flex-box{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#Alexei-foto{
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 3px solid black;
+}
+.text{
+	display: inline-block;
+	text-align: justify;
+}
+#slider-1{
+	width: 90%;
+	height: 50%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5%;
+}
+.slider-1-slide{
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+#slide-1{
+	width: 15%;
+	top: 0;
+	left: 0;
+	background-color: grey;
+}
+#slide-2{
+	width: 60%;
+	top: 0;
+	left: 20%;
+	background-color: brown;
+}
+#slide-3{
+	width: 15%;
+	top: 0;
+	left: 85%;
+	background-color: blue;
+}
+img{
+	width: 100%;
+}
+footer{
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 140px;
+	box-shadow: 0 0 5px 2px black;
+}
+
+.footer-child{
+	flex-basis: 45%;
+	height: 90%;
+	border: 2px solid black;
+	border-radius: 15px;
+}
+.contact{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.link{
+	cursor: pointer;
+	border-radius: 10px;
+}
+.link:hover{
+	box-shadow: 0 0 5px 2px black;
+}
+.contact-link{
+	width: 40px;
+	height: 40px;
+	background-color: gray;
+}
+.details{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.details-link{
+	width: 80%;
+	height: 41%;
+	background-color: gray;
+}
+@media (max-width: 1440px){
+	.container{
+		max-width: 1200px;
+	}
+}
+@media (max-width: 1240px){
+	.container{
+		max-width: 970px;
+	}
+	#help > .title {
+		flex: 2;
+	}
+}
+@media (max-width: 992px){
+	.container{
+		max-width: 750px;
+	}
+	#visible-page{
+		overflow-y: scroll;
+	}
+	.grid-box-wrapper{
+		width: 100%;
+		height: 100%;
+	}
+	.grid-box-1{
+		display: block;
+		height: 600px;
+	}
+	.grid-item{
+		display: block;
+		width: 100%;
+		margin: 10px auto;
+	}
+	.item-1{
+		width: 100%;
+		height: 300px;
+		background-color: green;
+	}
+	.item-2{
+		width: 100%;
+		height: 300px;
+		background-color: yellow;
+	}
+	.item-3{
+		width: 100%;
+		height: 300px;
+		background-color: grey;
+	}
+	#project-title{
+		font-size: 24px;
+	}
+	#Alexei-foto{
+		max-width: 140px;
+		max-height: 140px;
+		margin: 0 auto;
+	}
+	#box-Alexei-foto{
+		max-width: 20%;
+	}
+}
+
+@media (max-width: 767px){
+	.container{
+		margin: 15px 15px auto 15px;
+	}
+	#project-title{
+		font-size: 20px;
+	}
+	.title{
+		display: block;
+		position: absolute;
+		opacity: 0;
+		width: 0;
+	}
+	#page-buttons{
+		width: 400px;
+	}
+	footer{
+		height: 200px;
+		position: static;
+		flex-direction: column;
+		padding: 0;
+	}
+	.footer-child{
+		height: 80px;
+		width: 85%;
+	}
+	.contact-link{
+		width: 40px;
+		height: 40px;
+	}
+	#box-Alexei-foto{
+		width: 100%;
+		padding: 10px;
+	}
+	#box-text{
+		width: 100%;
+	}
+} 
+@media (max-width: 460px) {
+	#page-buttons{
+		width: 300px;
+	}
+}
+@media (max-width: 560px){
+	.default{
+		border: 2px solid #98cb0d;
+	}
+	
+	#container{
+		position: fixed;
+		top: 8px;
+		left: 8px;
+		right: 8px;
+		bottom: 8px;
+		background-color: #6dd3ff;
+		margin: 0px;
+	}
+	#visible{
+		position: fixed;
+		top: 16px;
+		left: 16px;
+		right: 16px;
+		bottom: 108px;
+		border-radius: 20px;
+		overflow-x: clip;
+		overflow-y: scroll; 
+	}
+	.second-default{
+		margin-top: 8px;
+
+	}
+	header{
+		position: static;
+		width: 100%;
+		height: 80px;
+		padding: 0;
+	}
+	#Chervo-emb{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: grey;
+		margin: 10px auto;
+	}
+	#help-emb{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: grey;
+		margin: 10px auto;
+	}
+	.title{
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	main{
+		width: 100%;
+		border-radius: 20px;
+		border-top: 2px solid #98cb0d;
+		border-left: 2px solid #98cb0d;
+		border-bottom: 2px solid black;
+		border-right: 2px solid black;
+	}
+	.page{
+		
+		font-size: 14px;
+	}
+	#page-buttons{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		left: 0px;
+		bottom: 8px;
+		background-color: #ffef78;
+		padding: 0 8px 0px 8px;
+	}
+	#page-buttons-color{
+		width: 100%;
+		height: 100%;
+		background-color: #6dd3ff;	
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	.page-button{
+		width: 45px;
+		height: 45px;
+	}
+	#slider1{
+		width: 100%;
+		padding: 10px;
+		height: 300px;
+	}
+	footer{
+		height: 190px;
+		position: static;
+		padding: 0;
+	}
+	.footer-child{
+		height: 80px;
+		width: 90%;
+	}
+	.contact{
+		margin-top: 10px;
+	}
+	.contact-link{
+		width: 40px;
+		height: 40px;
+	}
+	.details{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 5px;
+	}
+	.details-link{
+		width: 60px;
+		height: 60px;
+
+	}
+	#Alexei-foto{
+		max-width: 60px;
+		max-height: 60px;
+	}
+	
+}
