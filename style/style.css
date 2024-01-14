@@ -89,11 +89,6 @@ main{
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 10px;
 }
-#grid-2{
-  font-family: "Oswald", sans-serif;
-  font-weight: 60;
-  font-style: normal;
-}
 #grid-item-1{
 	grid-row: 1/4;
 	grid-column: 1/4;
