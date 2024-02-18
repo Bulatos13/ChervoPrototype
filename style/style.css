@@ -44,7 +44,15 @@ header{
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
-	background-color: grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#head-logo-Chervo{
+	width: 120px;
+}
+#head_logo_fasie{
+	width: 120px;
 }
 .title{
 	text-align: center;
@@ -69,16 +77,18 @@ main{
 	padding: 10px;
 	font-size: 16px;
 }
+#visible-page>.grid{
+	grid-gap: 10px;
+}
 .grid{
 	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-gap: 10px;
 }
 .grid-item{
 	border-radius: 15px;
-	background-color: grey;
+	box-shadow: 0 0 6px 1px black;
 	text-align: justify;
 	padding: 10px;
 }
@@ -88,6 +98,11 @@ main{
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 10px;
+}
+#grid-2{
+  font-family: "Oswald", sans-serif;
+  font-weight: 60;
+  font-style: normal;
 }
 #grid-item-1{
 	grid-row: 1/4;
@@ -169,7 +184,7 @@ main{
 }
 #active-button{
 	background-color: white;
-	border: 2px dashed green;
+	border: 2px solid green;
 }
 .hover-shadow:hover{
 	box-shadow: 0 0 5px 2px green;
@@ -226,10 +241,22 @@ footer{
 		width: calc(100% - 50px);
 		margin: 25px auto;
 	}
+	#head-logo-Chervo{
+		width: 100px;
+	}
+	#head_logo_fasie{
+		width: 100px;
+	}
 }
 @media(max-width: 750px) {
 	.title{
 		width: 130px;
+	}
+	#head-logo-Chervo{
+		width: 100px;
+	}
+	#head_logo_fasie{
+		width: 100px;
 	}
 }
 @media (max-width: 600px) {
