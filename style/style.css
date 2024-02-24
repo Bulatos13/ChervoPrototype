@@ -4,8 +4,7 @@
 	padding: 0;
 }
 body{
-	background-color: #ffef78;
-	font-family: 'Roboto Condensed', sans-serif;
+	background-color: white;
 }
 .default{
 	width: 100%;
@@ -16,7 +15,7 @@ body{
 	width: 100%;
 	max-width: 1000px;
 	margin: 40px auto;
-	background-color: #6dd3ff;
+	background-color: #00a54a;
 	border-radius: 20px;
 	padding: 10px;
 }
@@ -24,34 +23,24 @@ header{
 	height: 120px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
 .header-child{
-	flex-basis: 46%;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
-#header-vertical-line{
-	width: 3px;
-	height: 80%;
-	background-color: black;
+#logo-svg{
+	width: 200px;
+	height: 100px;
 }
-.emblem{
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-#head-logo-Chervo{
-	width: 120px;
-}
-#head_logo_fasie{
-	width: 120px;
-}
-.title{
+#title{
+	flex-basis: 30%;
+	font-size: 34px;
 	text-align: center;
+	color: #00662E;
+	text-transform: uppercase;
 }
 main{
 	position: relative;
@@ -185,44 +174,93 @@ main{
 	box-shadow: 0 0 5px 2px green;
 }
 footer{
-	height: 120px;
-	margin-top: 10px;
+	width: 100%;
+	height: 200px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+	background: #00652d;
+	margin-top: 10px;
+	border-radius: 20px;
+	color: white;
 }
 .footer-child{
-	width: 40%;
-	height: 90px;
+	height: 180px;
 	border-radius: 20px;
-	box-shadow: 0 0 5px 2px black;
 }
-.link-box{
+.footer-child-one{
+	flex-basis: 50%;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+.footer-child-two{
+	position: relative;
+	flex-basis: 30%;
+}
+.footer-child-box{
+	width: 240px;
+}
+.footer-child-item-one{
+	width: 180px;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: center;
+	margin: 15px auto;
+	border-bottom: 2px solid #00fd71;
+}
+.footer-child-content{
+	text-align: center;
+	width: 180px;
+	font-size: 18px;
+	margin: 15px auto;
 }
 .link{
-	width: 40px;
-	height: 40px;
-	background-color: grey;
-	border-radius: 8px;
+	color: white;
 }
-.detail-box{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+.news{
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 0 6px 2px black;
+	background: white;
 }
-.detail{
-	width: 40%;
-	height: 40px;
-	background-color: grey;
-	border-radius: 8px;
+#help-logo{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.help{
+	background:transparent;
+}
+#help-logo{
+	width: 160px;
+}
+.decoration{
+	width: 120px;
+	height: 105%;
+	position: absolute;
+	background: #00652d;
+}
+.left{
+	top: 0;
+	left: 0;
+}
+.right{
+	top: 0;
+	right: 0;
+}
+@media (max-width: 1500px){
+	.decoration{
+		width: 60px;
+	}
 }
 @media (max-width: 1200px){
 	#wrapper{
 		width: calc(100% - 60px);
 		margin: 30px auto;
+	}
+	.decoration{
+		width: 0;
 	}
 }
 @media (max-width: 1000px) {
@@ -236,23 +274,39 @@ footer{
 		width: calc(100% - 50px);
 		margin: 25px auto;
 	}
-	#head-logo-Chervo{
-		width: 100px;
+	#logo-svg{
+		width: 80px;
+		height: 100%;
 	}
-	#head_logo_fasie{
-		width: 100px;
+	#title{
+		width: 200px;
+		font-size: 26px;
+	}
+	footer{
+		display: block;
+		height: auto;
+	}
+	.footer-child{
+		height: 400px;
+	}	
+	.footer-child-one{
+		height: 200px;
+		justify-content: space-around;
+	}
+	}
+	.footer-child-two{
+		width: 100%;
+		max-width: 300px;
+		height: 200px;
+		margin: 0 auto;
 	}
 }
 @media(max-width: 750px) {
-	.title{
-		width: 130px;
+	#logo-svg{
+		width: 80px;
+		height: 100%;
 	}
-	#head-logo-Chervo{
-		width: 100px;
-	}
-	#head_logo_fasie{
-		width: 100px;
-	}
+	
 }
 @media (max-width: 600px) {
 	#wrapper{
@@ -281,22 +335,25 @@ footer{
 		width: 100px;
 		font-size: 14px;
 	}
-	footer{
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		height: 180px;
-		padding: 8px;
+	.footer-child-one{
+		display: block;
+		height: 400px;
 	}
-	.footer-child{
-		width: 100%;
-		height: 40%;
+	.footer-child-box{
+		margin: 0 auto;
+		height: 200px;
+	}
+	.footer-child-content{
+		margin: 18px auto;
 	}
 }
 @media(max-width: 500px) {
-	.title{
-		width: 80px;
-		font-size: 12px;
+	header{
+		display: block;
+	}
+	#title{
+		width: 0;
+		font-size: 0;
 	}
 }
 @media(max-width: 420px) {
@@ -324,7 +381,7 @@ footer{
 		border-radius: 20px;
 	}
 	header{
-		height: 70px;
+		height: 100px;
 		margin-bottom: 8px;
 	}
 	.header-child{
@@ -345,13 +402,12 @@ footer{
 		transform: translateX(0);
 		left: 0;
 		bottom: 0;
-		background-color: #ffef78;
 		padding: 0 8px 8px 8px;
 	}
 	#page-selector{
 		width: 100%;
 		height: 100%;
-		background-color: #6dd3ff;
+		background: #00a54a;
 		border-bottom-right-radius: 20px;
 		border-bottom-left-radius: 20px;
 	}
