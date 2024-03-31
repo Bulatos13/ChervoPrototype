@@ -178,55 +178,62 @@ main{
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: green;
 	position: absolute;
 	z-index: 2;
 	transition: 0.5s ease;
 	border: 2px solid green;
+	background: green;
+	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .active{
-	top: 0;
-	left: 0;
 	background: white;
 	color: black;
+	background: green;
 }
 footer{
 	width: 100%;
 	height: 200px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	background: #00652d;
 	margin-top: 10px;
 	border-radius: 20px;
 	color: white;
 }
-.footer-child{
-	height: 180px;
-	border-radius: 20px;
-}
-.footer-child-one{
-	flex-basis: 50%;
-	display: flex;
-	justify-content: space-between;
-}
-.footer-child-two{
-	position: relative;
-	flex-basis: 30%;
-}
 .footer-child-box{
 	width: 240px;
-}
-.footer-child-item-one{
-	width: 180px;
-	text-transform: uppercase;
-	font-size: 20px;
+	height: 160px;
+	background-color: #009744;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: space-around;
 	text-align: center;
-	margin: 15px auto;
-	border-bottom: 2px solid #00fd71;
+}
+.footer-child-item{
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #00652d;
+	padding: 4px;
+}
+.link-box{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: space-around;
+	text-align: center;
+}
+.link-box-item{
+	margin: 8px;
+	color: white;
 }
 .footer-child-content{
 	text-align: center;
@@ -304,8 +311,7 @@ footer{
 		font-size: 26px;
 	}
 	footer{
-		display: block;
-		height: auto;
+		height: 350px;
 	}
 	.footer-child{
 		height: 400px;
@@ -356,12 +362,15 @@ footer{
 		width: 100px;
 		font-size: 14px;
 	}
+	footer{
+		height: 580px;
+	}
 	.footer-child-one{
 		display: block;
 		height: 400px;
 	}
 	.footer-child-box{
-		margin: 0 auto;
+		margin: 0 auto;s
 		height: 200px;
 	}
 	.footer-child-content{
@@ -369,13 +378,10 @@ footer{
 	}
 }
 @media(max-width: 500px) {
-	header{
-		display: block;
-	}
 	#title{
-		width: 0;
-		font-size: 0;
+		font-size: 20px;
 	}
+	
 }
 @media(max-width: 420px) {
 	.title{

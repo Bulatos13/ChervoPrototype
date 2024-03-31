@@ -53,7 +53,7 @@ for(let i = 0; i < page.length; i++){
 				page[i].removeAttribute('id');
 				pageBtn[i].removeAttribute('id');
 				btnLid[i].style.background = 'green';
-				btnLid[i].style.color = 'black';
+				btnLid[i].style.color = 'white';
 			}
 			page[i].setAttribute('id', 'visible-page');
 			giveHeight(page[i]);
